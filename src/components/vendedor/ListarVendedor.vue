@@ -15,7 +15,7 @@
                 <tbody>
                     <tr v-for="(vendedor, index) in vendedores" :key="index">
                         <td>{{ vendedor.id }}</td>
-                        <td>{{ vendedor.nome }}</td>
+                        <td>{{ vendedor.name }}</td>
                         <td>{{ vendedor.login }}</td>
                         <td>
                             <button class="btn btn-success">Editar</button>
