@@ -7,7 +7,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Nomes</th>
+                        <th scope="col">Nome</th>
                         <th scope="col">Login</th>
                         <th scope="col">Ações</th>
                     </tr>
