@@ -10,11 +10,11 @@ class ClienteDataService {
     }
 
     obterPorId(id, cliente) {
-        return http.get(`/vendedor/${id}`, cliente);
+        return http.get(`/cliente/${id}`, cliente);
     }
 
     atualizar(id, cliente) {
-        return http.put(`/vendedor/${id}`, cliente); //interpolação de strings
+        return http.put(`/cliente/${id}`, cliente); //interpolação de strings
     }
 }
 
