@@ -18,7 +18,7 @@
                         <td>{{ cliente.nome }}</td>
                         <td>{{ cliente.login }}</td>
                         <td>
-                            <button class="btn btn-success">Editar</button>
+                            <button class="btn btn-success" @click="editarCliente(cliente.id)">Editar</button>
                             <button class="btn btn-danger">Excluir</button>
                         </td>
                     </tr>
@@ -44,6 +44,9 @@ export default {
                 .then(response => {
                     this.clientes = response.data;
                 })
+        },
+        editarCliente(id) {
+            this.$router.push('/cliente/' + id)
         }
     },
     mounted() {

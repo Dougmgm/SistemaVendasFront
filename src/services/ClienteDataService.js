@@ -5,8 +5,16 @@ class ClienteDataService {
         return http.get('/cliente/listar')
     }
 
-    cadastrar(vendedor) {
-        return http.post('/cliente', vendedor);
+    cadastrar(cliente) {
+        return http.post('/cliente', cliente);
+    }
+
+    obterPorId(id, cliente) {
+        return http.get(`/vendedor/${id}`, cliente);
+    }
+
+    atualizar(id, cliente) {
+        return http.put(`/vendedor/${id}`, cliente); //interpolação de strings
     }
 }
 

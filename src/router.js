@@ -1,11 +1,12 @@
 import { createWebHashHistory, createRouter } from "vue-router";
-import ListarVendedor from './components/vendedor/ListarVendedor.vue';
 import TheWelcome from './components/TheWelcome.vue'
+import ListarVendedor from './components/vendedor/ListarVendedor.vue';
 import CadastrarVendedor from './components/vendedor/CadastrarVendedor.vue'
 import AtualizarVendedor from './components/vendedor/AtualizarVendedor.vue'
 
 import ListarCliente from './components/cliente/ListarCliente.vue'
 import CadastrarCliente from './components/cliente/CadastrarCliente.vue'
+import AtualizarCliente from './components/cliente/AtualizarCliente.vue'
 
 import ListarServico from './components/servico/ListarServico.vue'
 import CadastrarServico from './components/servico/CadastrarServico.vue'
@@ -48,6 +49,11 @@ const routes = [
     {
         path:"/cliente/cadastrar",
         component: CadastrarCliente
+    },
+
+    {
+        path:"/cliente/:id",
+        component: AtualizarCliente
     },
 
 //----------------------------------------------------------serviço---------------------------------------------------------
