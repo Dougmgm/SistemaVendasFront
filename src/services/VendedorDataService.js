@@ -6,7 +6,7 @@ class VendedorDataService {
     }
 
     cadastrar(vendedor) {
-        http.post('/vendedor', vendedor);
+        return http.post('/Vendedor', vendedor);
     }
 }
 
