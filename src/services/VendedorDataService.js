@@ -10,7 +10,11 @@ class VendedorDataService {
     }
 
     atualizar(id, vendedor) {
-        return http.put('/Vendedor', id, vendedor); //interpolação de strings
+        return http.put(`/vendedor/${id}`, vendedor); //interpolação de strings
+    }
+
+    obterPorId(id) {
+        return http.get(`/vendedor/${id}`, vendedor);
     }
 }
 
