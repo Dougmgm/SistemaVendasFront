@@ -1,28 +1,50 @@
 <template>
-    <h3>Novo Cliente</h3>
-    <div class="form">
-    <hr/>
-        <div class="col-4">
-            <div class="mb-3">
-                <label class="form-label">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome">
+    <div>
+        <h3>Novo Cliente</h3>
+        <div class="form">
+            <hr />
+            <div class="col-4">
+                <div>
+                    <label class="form-label">Nome</label>
+                    <input type="text" required v-model="cliente.nome" class="form-control" placeholder="Nome"> <!--"v-model" para atrelar o dado digitado ao objeto de vendedor-->
+                </div>
+                <div>
+                    <label class="form-label">Login</label>
+                    <input type="text" required v-model="cliente.login" class="form-control" placeholder="Login"> <!--required não está funcionando-->
+                </div>
+                <div>
+                    <label class="form-label">Senha</label>
+                    <input type="password" required v-model="cliente.senha" class="form-control">
+                </div>
+                <button class="btn btn-success" id="btnCadastro" v-on:click="cadastrarCliente">Cadastrar</button>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Login</label>
-                <input type="text" class="form-control" placeholder="Login">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Senha</label>
-                <input type="password" class="form-control" placeholder="">
-            </div>
-            <button class="btn btn-success" id="btnCadastro">Cadastrar</button>
         </div>
     </div>
 </template>
 
 <script>
+    import ClienteDataService from '../../services/ClienteDataService';
+
     export default {
-        name: 'CadastrarCliente'
+        name: 'CadastrarVendedor',
+        data() {
+            return {
+                cliente: { //criando o objeto que irá dar o nome, login e senha
+                    nome: '',
+                    login: '',
+                    senha: ''
+                }
+            }
+        },
+        methods: {
+            cadastrarCliente() {  //metódo para cadastro do vendedor
+                console.log("teste")
+                ClienteDataService.cadastrar(this.cliente) //chama o método de cadastro do data service
+                        .then(() => {
+                            this.$router.push('listar');
+                        });                       
+            }
+        }
     }
 </script>
 
@@ -32,6 +54,6 @@
     }
 
     #btnCadastro{
-        margin-top: 3%
+        margin-top: 2%
     }
 </style>

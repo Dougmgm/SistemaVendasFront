@@ -13,10 +13,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(vendedor, index) in vendedores" :key="index">
-                        <td>{{ vendedor.id }}</td>
-                        <td>{{ vendedor.name }}</td>
-                        <td>{{ vendedor.login }}</td>
+                    <tr v-for="(cliente, index) in clientes" :key="index">
+                        <td>{{ cliente.id }}</td>
+                        <td>{{ cliente.nome }}</td>
+                        <td>{{ cliente.login }}</td>
                         <td>
                             <button class="btn btn-success">Editar</button>
                             <button class="btn btn-danger">Excluir</button>
@@ -29,25 +29,25 @@
 </template>
 
 <script>
-import VendedorDataService from '../../services/VendedorDataService';
+import ClienteDataService from '../../services/ClienteDataService';
 
 export default {
-    name: 'ListarVendedor',
+    name: 'ListarCliente',
     data() {
         return {
-            vendedores: []
+            clientes: []
         }
     },
     methods: {
-        obterVendedores() {
-            VendedorDataService.listar()
+        obterClientes() {
+            ClienteDataService.listar()
                 .then(response => {
-                    this.vendedores = response.data;
+                    this.clientes = response.data;
                 })
         }
     },
     mounted() {
-        this.obterVendedores();
+        this.obterClientes();
     }
 }   
 </script>

@@ -10,7 +10,7 @@
                 </div>
                 <div>
                     <label class="form-label">Login</label>
-                    <input type="text" required v-model="vendedor.login" class="form-control" placeholder="Login">
+                    <input type="text" required v-model="vendedor.login" class="form-control" placeholder="Login"> <!--required não está funcionando-->
                 </div>
                 <div>
                     <label class="form-label">Senha</label>
