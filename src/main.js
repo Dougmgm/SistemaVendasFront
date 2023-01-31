@@ -11,6 +11,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 */
+
 createApp(App)
     .use(router)
     .mount('#app')

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Listagem de vendedores</h3>
+        <h3>Listagem de clientes</h3>
         <div class="col-7"> <!--"col-8" serve para ajustar o tamanho com o numero sendo o modificador-->
             <hr/>
             <table class="table table-striped">
