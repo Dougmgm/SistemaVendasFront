@@ -5,6 +5,10 @@
             <hr />
             <div class="col-4">
                 <div>
+                    <label class="form-label">Id</label>
+                    <input type="text" disabled v-model="vendedor.id" class="form-control"> <!--"v-model" para atrelar o dado digitado ao objeto de vendedor-->
+                </div>
+                <div>
                     <label class="form-label">Nome</label>
                     <input type="text" required v-model="vendedor.name" class="form-control" placeholder="Nome"> <!--"v-model" para atrelar o dado digitado ao objeto de vendedor-->
                 </div>
@@ -50,7 +54,7 @@
 
         },
         mounted() {
-            this.obterVendedor(this.$route.params.id)
+            this.obterVendedor(this.$route.params.id);
         }
     }
 </script>

@@ -9,13 +9,15 @@ class VendedorDataService {
         return http.post('/Vendedor', vendedor);
     }
 
+    obterPorId(id, vendedor) {
+        return http.get(`/vendedor/${id}`, vendedor);
+    }
+
     atualizar(id, vendedor) {
         return http.put(`/vendedor/${id}`, vendedor); //interpolação de strings
     }
 
-    obterPorId(id) {
-        return http.get(`/vendedor/${id}`, vendedor);
-    }
+    
 }
 
 export default new VendedorDataService();
