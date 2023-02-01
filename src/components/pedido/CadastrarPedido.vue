@@ -16,7 +16,7 @@
                     <label class="form-label">ID do cliente</label>
                     <input type="text" required v-model="pedidos.clieteId" class="form-control">
                 </div>
-                <button class="btn btn-success" id="btnCadastro" @click="cadastrarPedido">Cadastrar</button>
+                <button class="btn btn-success" id="btnCadastro" @click="dataAtual">Cadastrar</button>
             </div>
         </div>
     </div>
@@ -46,8 +46,8 @@
                         });                       
             },
             dataAtual() {
-                var data = new Date();
-                console.log(data)
+                var buscarData = new Date().toISOString().split('T')[0];
+                console.log(buscarData)
             }
         }
     }
