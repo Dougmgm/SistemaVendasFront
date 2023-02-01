@@ -6,7 +6,7 @@
             <div class="col-4">
                 <div>
                     <label class="form-label">Data</label>
-                    <input type="text" required v-model="pedidos.date" class="form-control">
+                    <input type="text" required v-model="pedidos.data" class="form-control">
                 </div>
                 <div>
                     <label class="form-label">ID do vendedor</label>
@@ -14,9 +14,9 @@
                 </div>
                 <div>
                     <label class="form-label">ID do cliente</label>
-                    <input type="text" required v-model="pedidos.clieteId" class="form-control">
+                    <input type="text" required v-model="pedidos.clienteId" class="form-control">
                 </div>
-                <button class="btn btn-success" id="btnCadastro" @click="dataAtual">Cadastrar</button>
+                <button class="btn btn-success" id="btnCadastro" @click="cadastrarPedido">Cadastrar</button>
             </div>
         </div>
     </div>
@@ -30,9 +30,9 @@
         data() {
             return {
                 pedidos: { 
-                    date: '',
+                    data: '',
                     vendedorId: '',
-                    clieteId: ''
+                    clienteId: ''
                 }
             }
         },
