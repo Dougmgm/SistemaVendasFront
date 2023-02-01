@@ -10,6 +10,7 @@ import AtualizarCliente from './components/cliente/AtualizarCliente.vue'
 
 import ListarServico from './components/servico/ListarServico.vue'
 import CadastrarServico from './components/servico/CadastrarServico.vue'
+import AtualizarServico from './components/servico/AtualizarServico.vue'
 
 
 
@@ -67,6 +68,10 @@ const routes = [
         component: CadastrarServico
     },
 
+    {
+        path:"/servico/:id",
+        component: AtualizarServico
+    },
 
 ];
 

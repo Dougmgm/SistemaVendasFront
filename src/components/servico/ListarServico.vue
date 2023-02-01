@@ -6,18 +6,20 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(servico, index) in servicos" :key="index">
+                    <tr v-for="(servico, index) in servico" :key="index">
+                        <td>{{ servico.id }}</td>
                         <td>{{ servico.nome }}</td>
                         <td>{{ servico.descricao }}</td>
                         <td>
-                            <button class="btn btn-success">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
+                            <button class="btn btn-success" @click="editarServico(servico.id)">Editar</button>
+                            <button class="btn btn-danger" @click="excluirServico(servico)">Excluir</button>
                         </td>
                     </tr>
                 </tbody>
@@ -33,15 +35,25 @@ export default {
     name: 'ListarServico',
     data() {
         return {
-            servicos: []
+            servico: []
         }
     },
     methods: {
         obterServico() {
             ServicoDataService.listar()
                 .then(response => {
-                    this.servicos = response.data;
+                    this.servico = response.data;
                 })
+        },
+        editarServico(id) { //método para editar
+            this.$router.push('/servico/' + id)
+        },
+        async excluirServico(servico) {
+            if (confirm(`Tem certeza que deseja excluir o serviço ${servico.nome}?`)) //Confirm exibe mensagem de "sim ou não" para pode deletar o vendedor
+            {
+                await ServicoDataService.deletar(servico.id); //literalmente aguarda o resultado da API para permitir a pagina mudar sozinha
+                this.obterServico() //chama novamente para atualizar a pagina e não exibir o vendedor atualizado
+            }
         }
     },
     mounted() {

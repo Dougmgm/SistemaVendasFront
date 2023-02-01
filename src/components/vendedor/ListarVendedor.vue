@@ -49,12 +49,11 @@ export default {
             this.$router.push('/vendedor/' + id)
         },
         async excluirVendedor(vendedor) {
-            if (confirm(`Tem certeza que deseja excluir o vendedor${vendedor.nome}?`)) //Confirm exibe mensagem de "sim ou não" para pode deletar o vendedor
+            if (confirm(`Tem certeza que deseja excluir o vendedor ${vendedor.name}?`)) //Confirm exibe mensagem de "sim ou não" para pode deletar o vendedor
             {
                 await VendedorDataService.deletar(vendedor.id); //literalmente aguarda o resultado da API para permitir a pagina mudar sozinha
                 this.obterVendedores() //chama novamente para atualizar a pagina e não exibir o vendedor atualizado
             }
-
         }
     },
     mounted() {

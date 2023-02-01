@@ -16,6 +16,10 @@ class ClienteDataService {
     atualizar(id, cliente) {
         return http.put(`/cliente/${id}`, cliente); //interpolação de strings
     }
+
+    async deletar(id) {
+        return await http.delete(`/cliente/${id}`);
+    }
 }
 
 export default new ClienteDataService();

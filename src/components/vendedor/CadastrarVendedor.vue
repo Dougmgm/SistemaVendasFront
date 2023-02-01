@@ -39,11 +39,7 @@
         methods: {
             cadastrarVendedor() {  //metódo para cadastro do vendedor
                 console.log("teste")
-                // var data = {
-                //     name: this.vendedor.Name,
-                //     login: this.vendedor.Login,
-                //     senha: this.vendedor.Senha
-                // };
+                
                 VendedorDataService.cadastrar(this.vendedor) //chama o método de cadastro do data service
                         .then(() => {
                             this.$router.push('listar');

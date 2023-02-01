@@ -19,7 +19,7 @@
                         <td>{{ cliente.login }}</td>
                         <td>
                             <button class="btn btn-success" @click="editarCliente(cliente.id)">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
+                            <button class="btn btn-danger" @click="excluirCliente(cliente)">Excluir</button>
                         </td>
                     </tr>
                 </tbody>
@@ -47,6 +47,13 @@ export default {
         },
         editarCliente(id) {
             this.$router.push('/cliente/' + id)
+        },
+        async excluirCliente(cliente) {
+            if (confirm(`Tem certeza que deseja excluir o cliente ${cliente.nome}?`)) //Confirm exibe mensagem de "sim ou não" para pode deletar o vendedor
+            {
+                await ClienteDataService.deletar(cliente.id); //literalmente aguarda o resultado da API para permitir a pagina mudar sozinha
+                this.obterClientes() //chama novamente para atualizar a pagina e não exibir o vendedor atualizado
+            }
         }
     },
     mounted() {
