@@ -44,7 +44,8 @@
                         .then(() => {
                             this.$router.push('listar');
                         });                       
-            }
+            },
+            
         }
     }
 </script>

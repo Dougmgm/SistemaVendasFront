@@ -12,8 +12,9 @@ import ListarServico from './components/servico/ListarServico.vue'
 import CadastrarServico from './components/servico/CadastrarServico.vue'
 import AtualizarServico from './components/servico/AtualizarServico.vue'
 
-
-
+import ListarPedido from './components/pedido/ListarPedido.vue'
+import CadastrarPedido from './components/pedido/CadastrarPedido.vue'
+import AtualizarPedido from './components/pedido/AtualizarPedido.vue'
 
 const routes = [
     {
@@ -73,6 +74,22 @@ const routes = [
         component: AtualizarServico
     },
 
+//----------------------------------------------------------pedido---------------------------------------------------------
+
+    {
+        path:"/pedido/listar",
+        component: ListarPedido
+    },
+
+    {
+        path:"/pedido/cadastrar",
+        component: CadastrarPedido
+    },
+
+    {
+        path:"/pedido/:id",
+        component: AtualizarPedido
+    },
 ];
 
 const router = createRouter({

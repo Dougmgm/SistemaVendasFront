@@ -26,6 +26,36 @@
       </div>
     </div>
 
+    <div class="dropdown">
+      <button class="dropbtn">Serviços
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <router-link to="/servico/listar">Listar</router-link>
+        <router-link to="/servico/cadastrar">Cadastrar</router-link>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Pedidos
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <router-link to="/pedido/listar">Listar</router-link>
+        <router-link to="/pedido/cadastrar">Cadastrar</router-link>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Item dos Pedidos
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <router-link to="/servico/listar">Listar</router-link>
+        <router-link to="/servico/cadastrar">Cadastrar</router-link>
+      </div>
+    </div>
+
   </div>
   <router-view />
 </template>

@@ -5,16 +5,16 @@ class PedidoDataService {
         return http.get('/pedido/listar')
     }
 
-    cadastrar(pedido) {
-        return http.post('/pedido', pedido);
+    cadastrar(pedidos) {
+        return http.post('/pedido', pedidos);
     }
 
-    obterPorId(id, pedido) {
-        return http.get(`/pedido/${id}`, pedido);
+    obterPorId(id, pedidos) {
+        return http.get(`/pedido/${id}`, pedidos);
     }
 
-    atualizar(id, pedido) {
-        return http.put(`/pedido/${id}`, pedido); //interpolação de strings
+    atualizar(id, pedidos) {
+        return http.put(`/pedido/${id}`, pedidos); 
     }
 
     async deletar(id) {
