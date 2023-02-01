@@ -19,7 +19,7 @@
                         <td>{{ vendedor.login }}</td>
                         <td>
                             <button class="btn btn-success" @click="editarVendedor(vendedor.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
-                            <button class="btn btn-danger">Excluir</button>
+                            <button class="btn btn-danger" @click="excluirVendedor(vendedor)">Excluir</button>
                         </td>
                     </tr>
                 </tbody>
@@ -41,12 +41,20 @@ export default {
     methods: {
         obterVendedores() {
             VendedorDataService.listar()
-                .then(response => {
+                .then(response => { 
                     this.vendedores = response.data;
                 })
         },
-        editarVendedor(id) {
+        editarVendedor(id) { //método para editar
             this.$router.push('/vendedor/' + id)
+        },
+        async excluirVendedor(vendedor) {
+            if (confirm(`Tem certeza que deseja excluir o vendedor${vendedor.nome}?`)) //Confirm exibe mensagem de "sim ou não" para pode deletar o vendedor
+            {
+                await VendedorDataService.deletar(vendedor.id); //literalmente aguarda o resultado da API para permitir a pagina mudar sozinha
+                this.obterVendedores() //chama novamente para atualizar a pagina e não exibir o vendedor atualizado
+            }
+
         }
     },
     mounted() {

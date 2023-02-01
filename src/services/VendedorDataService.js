@@ -17,6 +17,9 @@ class VendedorDataService {
         return http.put(`/vendedor/${id}`, vendedor); //interpolação de strings
     }
 
+    async deletar(id) {
+        return await http.delete(`/vendedor/${id}`);
+    }
     
 }
 
