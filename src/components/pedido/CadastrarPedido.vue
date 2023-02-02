@@ -34,7 +34,6 @@
                     vendedorId: '',
                     clienteId: ''
                 }
-                , teste: ''
             }
         },
         methods: {
