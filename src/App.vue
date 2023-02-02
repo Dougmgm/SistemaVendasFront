@@ -6,13 +6,14 @@
 
 <template>
   <div class="navbar">
+    <a href="/">Home</a>
     <div class="dropdown">
       <button class="dropbtn">Vendedor
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <router-link to="/vendedor/listar">Listar</router-link>
-        <router-link to="/vendedor/cadastrar">Cadastrar</router-link>
+        <router-link to="/vendedor/listar">Listar vendedor</router-link>
+        <router-link to="/vendedor/cadastrar">Cadastrar vendedor</router-link>
       </div>
     </div>
     
@@ -21,8 +22,8 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <router-link to="/cliente/listar">Listar</router-link>
-        <router-link to="/cliente/cadastrar">Cadastrar</router-link>
+        <router-link to="/cliente/listar">Listar cliente</router-link>
+        <router-link to="/cliente/cadastrar">Cadastrar cliente</router-link>
       </div>
     </div>
 
@@ -31,8 +32,8 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <router-link to="/servico/listar">Listar</router-link>
-        <router-link to="/servico/cadastrar">Cadastrar</router-link>
+        <router-link to="/servico/listar">Listar serviços</router-link>
+        <router-link to="/servico/cadastrar">Cadastrar serviços</router-link>
       </div>
     </div>
 
@@ -41,8 +42,8 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <router-link to="/pedido/listar">Listar</router-link>
-        <router-link to="/pedido/cadastrar">Cadastrar</router-link>
+        <router-link to="/pedido/listar">Listar pedidos</router-link>
+        <router-link to="/pedido/cadastrar">Cadastrar pedidos</router-link>
       </div>
     </div>
 
@@ -51,8 +52,8 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <router-link to="/servico/listar">Listar</router-link>
-        <router-link to="/servico/cadastrar">Cadastrar</router-link>
+        <router-link to="/servico/listar">Listar itens</router-link>
+        <router-link to="/servico/cadastrar">Cadastrar itens</router-link>
       </div>
     </div>
 

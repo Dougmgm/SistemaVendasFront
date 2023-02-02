@@ -20,7 +20,7 @@
                         <td>{{ pedidos.date }}</td>
                         <td>{{ pedidos.vendedorId }}</td>
                         <td>{{ pedidos.clienteId }}</td>
-                        <td>{{ pedidos.clienteId }}</td>
+                        <td>valor aqui</td>    
                         <td>
                             <button class="btn btn-success" @click="editarPedido(pedidos.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
                             <button class="btn btn-danger" @click="excluirPedido(pedidos)">Excluir</button>
@@ -35,12 +35,15 @@
 <script>
 import PedidoDataService from '../../services/PedidoDataService';
 
+
 export default {
     name: 'ListarPedidos',
     data() {
         return {
-            pedidos: []
+            pedidos: [],
+            itemPedido: []
         }
+        
     },
     methods: {
         obterPedido() {

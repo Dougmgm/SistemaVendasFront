@@ -13,6 +13,7 @@ import CadastrarServico from './components/servico/CadastrarServico.vue'
 import AtualizarServico from './components/servico/AtualizarServico.vue'
 
 import ListarPedido from './components/pedido/ListarPedido.vue'
+import ListarPedidoVendedor from './components/pedido/ListarPedidoVendedor.vue'
 import CadastrarPedido from './components/pedido/CadastrarPedido.vue'
 import AtualizarPedido from './components/pedido/AtualizarPedido.vue'
 
@@ -86,6 +87,11 @@ const routes = [
     },
 
     {
+        path:"/pedido/listarpedidovendedor",
+        component: ListarPedidoVendedor
+    },
+
+    {
         path:"/pedido/cadastrar",
         component: CadastrarPedido
     },
@@ -95,6 +101,7 @@ const routes = [
         component: AtualizarPedido
     },
 
+    
 //----------------------------------------------------------item pedido------------------------------------------------------
 
     {
