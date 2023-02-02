@@ -6,7 +6,7 @@
             <div class="col-4">
                 <div>
                     <label class="form-label">Data</label>
-                    <input type="text" required v-model="pedidos.data" class="form-control">
+                    <input type="text" disabled v-model="buscarData" class="form-control" id="data">
                 </div>
                 <div>
                     <label class="form-label">ID do vendedor</label>
@@ -34,6 +34,7 @@
                     vendedorId: '',
                     clienteId: ''
                 }
+                , teste: ''
             }
         },
         methods: {
@@ -45,10 +46,13 @@
                             this.$router.push('listar');
                         });                       
             },
-            dataAtual() {
-                var buscarData = new Date().toISOString().split('T')[0];
-                console.log(buscarData)
+           dataAtual() {
+                this.buscarData = new Date().toISOString().split('T')[0];
+                console.log(this.buscarData)
             }
+        },
+        created() {
+            this.dataAtual()
         }
     }
 </script>
