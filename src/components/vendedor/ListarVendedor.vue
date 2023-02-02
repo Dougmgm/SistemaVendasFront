@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <h3>Listagem de vendedores</h3>
+    <div id="princi">
+        <h3 id="teste">Listagem de vendedores</h3>
         <div class="col-7"> <!--"col-8" serve para ajustar o tamanho com o numero sendo o modificador-->
             <hr/>
-            <table class="table table-striped">
+            <table class="table table-striped" id="tabela">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
@@ -61,3 +61,21 @@ export default {
     }
 }   
 </script>
+
+<style scoped>
+    
+    #tabela{
+        /* margin-left: 3%; */
+        margin: auto;
+        width: 100%;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+
+    #princi {
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73AD21;
+        padding: 10px;
+    }
+</style>

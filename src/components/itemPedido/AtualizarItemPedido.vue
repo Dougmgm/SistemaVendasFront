@@ -63,9 +63,11 @@
 <style scoped>
     .form{
         padding: 1%
+        
     }
 
     #btnCadastro{
         margin-top: 2%
+        
     }
 </style>

@@ -10,6 +10,8 @@
                         <th scope="col">Data</th>
                         <th scope="col">ID do vendedor</th>
                         <th scope="col">ID do cliente</th>
+                        <th scope="col">Valor Total</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -17,6 +19,7 @@
                         <td>{{ pedidos.id }}</td>
                         <td>{{ pedidos.date }}</td>
                         <td>{{ pedidos.vendedorId }}</td>
+                        <td>{{ pedidos.clienteId }}</td>
                         <td>{{ pedidos.clienteId }}</td>
                         <td>
                             <button class="btn btn-success" @click="editarPedido(pedidos.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->

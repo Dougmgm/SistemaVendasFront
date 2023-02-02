@@ -51,8 +51,8 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <router-link to="/itemPedido/listar">Listar</router-link>
-        <router-link to="/itemPedido/cadastrar">Cadastrar</router-link>
+        <router-link to="/servico/listar">Listar</router-link>
+        <router-link to="/servico/cadastrar">Cadastrar</router-link>
       </div>
     </div>
 
