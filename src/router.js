@@ -1,5 +1,5 @@
 import { createWebHashHistory, createRouter } from "vue-router";
-import TheWelcome from './components/TheWelcome.vue'
+//import TheWelcome from './components/TheWelcome.vue'
 import ListarVendedor from './components/vendedor/ListarVendedor.vue';
 import CadastrarVendedor from './components/vendedor/CadastrarVendedor.vue'
 import AtualizarVendedor from './components/vendedor/AtualizarVendedor.vue'
@@ -22,10 +22,10 @@ import CadastrarItemPedido from './components/itemPedido/CadastrarItemPedido.vue
 import AtualizarItemPedido from './components/itemPedido/AtualizarItemPedido.vue'
 
 const routes = [
-    {
-        path:"/", //caminho raiz
-        component: TheWelcome
-    }, 
+    // {
+    //     path:"/", //caminho raiz
+    //     component: TheWelcome
+    // }, 
 
 //----------------------------------------------------------vendedor---------------------------------------------------------
 
@@ -124,4 +124,5 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes
 });
+
 export default router

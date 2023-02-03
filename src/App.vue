@@ -1,128 +1,70 @@
-<script setup>
-
-</script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
 <template>
-  <div class="navbar">
-    <a href="/">Home</a>
-    <div class="dropdown">
-      <button class="dropbtn">Vendedor
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <router-link to="/vendedor/listar">Listar vendedor</router-link>
-        <router-link to="/vendedor/cadastrar">Cadastrar vendedor</router-link>
-      </div>
-    </div>
-    
-    <div class="dropdown">
-      <button class="dropbtn">Cliente
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <router-link to="/cliente/listar">Listar cliente</router-link>
-        <router-link to="/cliente/cadastrar">Cadastrar cliente</router-link>
-      </div>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="dropdown">
-      <button class="dropbtn">Serviços
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <router-link to="/servico/listar">Listar serviços</router-link>
-        <router-link to="/servico/cadastrar">Cadastrar serviços</router-link>
-      </div>
-    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Vendedor
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/vendedor/listar">Listar vendedor</router-link>
+            <router-link class="dropdown-item" to="/vendedor/cadastrar">Cadastrar vendedor</router-link>
+          </div>
+        </li>
 
-    <div class="dropdown">
-      <button class="dropbtn">Pedidos
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <router-link to="/pedido/listar">Listar pedidos</router-link>
-        <router-link to="/pedido/cadastrar">Cadastrar pedidos</router-link>
-      </div>
-    </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Cliente
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/cliente/listar">Listar Cliente</router-link>
+            <router-link class="dropdown-item" to="/cliente/cadastrar">Cadastrar Cliente</router-link>
+          </div>
+        </li>
 
-    <div class="dropdown">
-      <button class="dropbtn">Item dos Pedidos
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <router-link to="/servico/listar">Listar itens</router-link>
-        <router-link to="/servico/cadastrar">Cadastrar itens</router-link>
-      </div>
-    </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Serviços
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/servico/listar">Listar Serviços</router-link>
+            <router-link class="dropdown-item" to="/servico/cadastrar">Cadastrar Serviços</router-link>
+          </div>
+        </li>
 
-  </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Pedidos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/pedido/listar">Listar Pedidos</router-link>
+            <router-link class="dropdown-item" to="/pedido/cadastrar">Cadastrar Pedidos</router-link>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Item do Pedido
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/itempedido/listar">Listar Itens do Pedido</router-link>
+            <router-link class="dropdown-item" to="/itempedido/cadastrar">Cadastrar Itens do Pedido</router-link>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <router-view />
 </template>
 
-<style scoped>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>

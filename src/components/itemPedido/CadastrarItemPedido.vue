@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div id="primeiro">
         <h3>Novo Item Pedido</h3>
         <div class="form">
             <hr />
-            <div class="col-4">
+            <div class="col-7" id="tabela">
                 <div>
                     <label class="form-label">ID do Pedido</label>
                     <input type="text" required v-model="itemPedido.pedidoId" class="form-control" placeholder="ID do Pedido"> 
@@ -62,5 +62,18 @@
 
     #btnCadastro{
         margin-top: 2%
+    }
+
+    #primeiro {
+        margin: auto;
+        width: 40%;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #tabela{
+        margin: auto;
+        width: 80%;
+        padding: 10px;
     }
 </style>

@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div id="primeiro">
         <h3>Novo Servico</h3>
         <div class="form">
             <hr />
-            <div class="col-4">
+            <div class="col-9" id="tabela">
                 <div>
                     <label class="form-label">Nome</label>
                     <input type="text" required v-model="servico.nome" class="form-control" placeholder="Nome"> <!--"v-model" para atrelar o dado digitado ao objeto de vendedor-->
@@ -51,5 +51,18 @@
 
     #btnCadastro{
         margin-top: 2%
+    }
+
+    #primeiro {
+        margin: auto;
+        width: 40%;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #tabela{
+        margin: auto;
+        width: 80%;
+        padding: 10px;
     }
 </style>

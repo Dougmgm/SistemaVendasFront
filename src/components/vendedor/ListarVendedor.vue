@@ -1,9 +1,9 @@
 <template>
-    <div id="princi">
+    <div id="primeiro">
         <h3 id="teste">Listagem de vendedores</h3>
-        <div class="col-7"> <!--"col-8" serve para ajustar o tamanho com o numero sendo o modificador-->
+        <div class="col-12"> <!--"col-8" serve para ajustar o tamanho com o numero sendo o modificador-->
             <hr/>
-            <table class="table table-striped" id="tabela">
+            <table class="table table-striped" id="tabela"> 
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
@@ -64,18 +64,28 @@ export default {
 
 <style scoped>
     
-    #tabela{
-        /* margin-left: 3%; */
-        margin: auto;
-        width: 100%;
-        border: 3px solid #73AD21;
-        padding: 10px;
-    }
-
-    #princi {
+    #primeiro {
         margin: auto;
         width: 60%;
-        border: 3px solid #73AD21;
+        /* border: 3px solid #73AD21; */
         padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
     }
+
+    #tabela{
+        margin: auto;
+        width: 100%;
+        /* border: 3px solid #73AD21; */
+        padding: 10px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd; 
+    }
+    
+    th, td {
+        text-align: left;
+        padding: 16px;
+    }
+
 </style>
