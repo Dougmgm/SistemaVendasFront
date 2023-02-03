@@ -19,6 +19,7 @@
                         <td>{{ servico.descricao }}</td>
                         <td>
                             <button class="btn btn-success" @click="editarServico(servico.id)">Editar</button>
+                            <span> - </span>
                             <button class="btn btn-danger" @click="excluirServico(servico)">Excluir</button>
                         </td>
                     </tr>
@@ -63,6 +64,7 @@ export default {
 </script>
 
 <style scoped>
+
     #primeiro {
         margin: auto;
         width: 60%;
@@ -86,4 +88,5 @@ export default {
         text-align: left;
         padding: 16px;
     }
+
 </style>

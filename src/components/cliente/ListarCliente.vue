@@ -19,6 +19,7 @@
                         <td>{{ cliente.login }}</td>
                         <td>
                             <button class="btn btn-success" @click="editarCliente(cliente.id)">Editar</button>
+                            <span> - </span>
                             <button class="btn btn-danger" @click="excluirCliente(cliente)">Excluir</button>
                         </td>
                     </tr>

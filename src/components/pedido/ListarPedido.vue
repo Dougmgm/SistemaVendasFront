@@ -23,6 +23,7 @@
                         <td>valor aqui</td>    
                         <td>
                             <button class="btn btn-success" @click="editarPedido(pedidos.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
+                            <span> - </span>
                             <button class="btn btn-danger" @click="excluirPedido(pedidos)">Excluir</button>
                         </td>
                     </tr>

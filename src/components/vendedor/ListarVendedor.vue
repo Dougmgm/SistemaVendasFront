@@ -19,6 +19,7 @@
                         <td>{{ vendedor.login }}</td>
                         <td>
                             <button class="btn btn-success" @click="editarVendedor(vendedor.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
+                            <span> - </span>
                             <button class="btn btn-danger" @click="excluirVendedor(vendedor)">Excluir</button>
                         </td>
                     </tr>

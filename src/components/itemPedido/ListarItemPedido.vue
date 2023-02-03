@@ -24,6 +24,7 @@
                         <td onchange="setTwoNumberDecimal">R$ {{itemPedido.quantidade * itemPedido.valor}}</td>
                         <td>
                             <button class="btn btn-success" @click="editarItemPedido(itemPedido.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
+                            <span> - </span>
                             <button class="btn btn-danger" @click="excluirItemPedido(itemPedido)">Excluir</button>
                         </td>
                     </tr>
