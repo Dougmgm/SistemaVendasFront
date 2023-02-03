@@ -66,5 +66,10 @@
     </div>
   </nav>
   <router-view />
+  <TheWelcome />
 </template>
+
+<script>
+  import TheWelcome from './components/TheWelcome.vue';
+</script>
 
