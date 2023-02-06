@@ -1,6 +1,6 @@
 <template>
     <div id="primeiro">
-        <h3>Listagem de vendedores</h3>
+        <h3>Listagem de itens do pedido</h3>
         <div class="col-12"> <!--"col-8" serve para ajustar o tamanho com o numero sendo o modificador-->
             <hr/>
             <table class="table table-striped" id="tabela">
@@ -12,6 +12,7 @@
                         <th scope="col">Quantidade</th>
                         <th scope="col">Valor</th>
                         <th scope="col">Subtotal</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
