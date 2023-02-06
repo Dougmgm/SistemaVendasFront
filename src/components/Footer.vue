@@ -1,6 +1,6 @@
 <!-- Footer -->
 <template>
-    <div>
+    <div id="base">
         <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
@@ -52,4 +52,9 @@
 </footer>
     </div>
 </template>
-  <!-- Footer -->
+
+<style scoped>
+  .base{
+    margin-top: 50%;
+  }
+</style>

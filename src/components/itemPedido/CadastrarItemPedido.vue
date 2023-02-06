@@ -14,11 +14,11 @@
                 </div>
                 <div>
                     <label class="form-label">Quantidade</label>
-                    <input type="number" required v-model="itemPedido.quantidade" class="form-control">
+                    <input type="number" min="0" required v-model="itemPedido.quantidade" class="form-control">
                 </div>
                 <div>
                     <label class="form-label">Valor</label>
-                    <input type=number step=0.01 required v-model="itemPedido.valor" class="form-control">
+                    <input type="number" min="0" step="0.01" required v-model="itemPedido.valor" class="form-control">
                 </div>
 
                 <button class="btn btn-success" id="btnCadastro" v-on:click="cadastrarItemPedido">Cadastrar</button>
@@ -73,6 +73,7 @@
 
     #tabela{
         margin: auto;
+        margin-bottom: 9%;
         width: 80%;
         padding: 10px;
     }

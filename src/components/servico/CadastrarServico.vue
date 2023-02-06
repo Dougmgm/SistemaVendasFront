@@ -62,6 +62,7 @@
 
     #tabela{
         margin: auto;
+        margin-bottom: 32%;
         width: 80%;
         padding: 10px;
     }

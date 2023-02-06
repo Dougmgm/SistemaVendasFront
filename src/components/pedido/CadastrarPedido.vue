@@ -67,8 +67,8 @@
 
     #primeiro {
         margin: auto;
+        margin-bottom: 8%;
         width: 40%;
-        border: 3px solid #73AD21;
         padding: 10px;
         font-family: Arial, Helvetica, sans-serif;
     }
