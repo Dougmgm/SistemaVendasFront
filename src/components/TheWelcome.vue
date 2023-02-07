@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Seja bem vindo ao sistema</h2>
+    <h2>Seja bem vindo ao sistema de vendas</h2>
   </div>
 </template>
 
@@ -9,3 +9,7 @@
   name: 'TheWelcome'
 }
 </script>
+
+<style scoped>
+
+</style>
