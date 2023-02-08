@@ -6,7 +6,7 @@
             <div class="col-7" id="tabela">
                 <div>
                     <label class="form-label">Data</label>
-                    <input type="text" disabled v-model="buscarData" class="form-control" id="data">
+                    <input type="text" disabled :value="obterData(dataImput)" class="form-control" id="data">
                 </div>
                 <div>
                     <label class="form-label">ID do vendedor</label>
@@ -23,59 +23,59 @@
 </template>
 
 <script>
-    import PedidoDataService from '../../services/PedidoDataService';
+import PedidoDataService from '../../services/PedidoDataService';
 
-    export default {
-        name: 'CadastrarPedido',
-        data() {
-            return {
-                pedidos: { 
-                    data: '',
-                    vendedorId: '',
-                    clienteId: ''
-                }
+export default {
+    name: 'CadastrarPedido',
+    data() {
+        return {
+            dataImput: new Date(),
+            pedidos: {
+                date: new Date().toISOString(),
+                vendedorId: '',
+                clienteId: ''
             }
+        }
+    },
+    methods: {
+        cadastrarPedido() {
+            var data ={
+                date: this.pedidos.date,
+                vendedorId: this.pedidos.vendedorId,
+                clienteId: this.pedidos.clienteId
+            };
+            PedidoDataService.cadastrar(data).then(() => {
+                    this.$router.push('listar');
+                });
         },
-        methods: {
-            cadastrarPedido() {  
-                console.log("teste")
-                
-                PedidoDataService.cadastrar(this.pedidos) //chama o método de cadastro do data service
-                        .then(() => {
-                            this.$router.push('listar');
-                        });                       
-            },
-           dataAtual() {
-                this.buscarData = new Date().toISOString().split('T')[0];
-                console.log(this.buscarData)
-            }
-        },
-        created() {
-            this.dataAtual()
+        obterData(data) {
+            let dataPedido = data;
+            return dataPedido.toLocaleString();
         }
     }
+}
 </script>
 
 <style scoped>
-    .form{
-        padding: 1%
-    }
+.form {
+    padding: 1%
+}
 
-    #btnCadastro{
-        margin-top: 2%
-    }
+#btnCadastro {
+    margin-top: 2%
+}
 
-    #primeiro {
-        margin: auto;
-        margin-bottom: 8%;
-        width: 40%;
-        padding: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+#primeiro {
+    margin: auto;
+    margin-bottom: 8%;
+    width: 40%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    #tabela{
-        margin: auto;
-        width: 80%;
-        padding: 10px;
-    }
+#tabela {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
 </style>

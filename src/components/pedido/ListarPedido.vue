@@ -15,16 +15,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(pedidos, index) in pedidos" :key="index">
-                        <td>{{ pedidos.id }}</td>
-                        <td>{{ pedidos.date }}</td>
-                        <td>{{ pedidos.vendedorId }}</td>
-                        <td>{{ pedidos.clienteId }}</td>
+                    <tr v-for="(pedido, index) in pedidos" :key="index">
+                        <td>{{ pedido.id }}</td>
+                        <td>{{ obterData(pedido.date) }}</td>
+                        <td>{{ pedido.vendedorId }}</td>
+                        <td>{{ pedido.clienteId }}</td>
                         <td>valor aqui</td>    
                         <td>
-                            <button class="btn btn-success" @click="editarPedido(pedidos.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
+                            <button class="btn btn-success" @click="editarPedido(pedido.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
                             <span> - </span>
-                            <button class="btn btn-danger" @click="excluirPedido(pedidos)">Excluir</button>
+                            <button class="btn btn-danger" @click="excluirPedido(pedido)">Excluir</button>
                         </td>
                     </tr>
                 </tbody>
@@ -62,6 +62,10 @@ export default {
                 await PedidoDataService.deletar(pedidos.id); 
                 this.obterPedido() 
             }
+        },
+        obterData(data){
+            let dataPedido = new Date(data);
+            return dataPedido.toLocaleString();
         }
     },
     mounted() {
