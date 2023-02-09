@@ -73,7 +73,6 @@ export default {
     #primeiro {
         margin: auto;
         width: 60%;
-        /* border: 3px solid #73AD21; */
         padding: 10px;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -81,7 +80,6 @@ export default {
     #tabela{
         margin: auto;
         width: 100%;
-        /* border: 3px solid #73AD21; */
         padding: 10px;
         border-collapse: collapse;
         border-spacing: 0;
