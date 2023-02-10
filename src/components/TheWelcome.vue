@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Seja bem vindo ao sistema de vendas</h2>
+    <h3>Seja bem vindo ao sistema de vendas</h3>
   </div>
 </template>
 
@@ -11,5 +11,8 @@
 </script>
 
 <style scoped>
-
+  h3 {
+    margin-top: 5%;
+    margin-left: 35%;
+  }
 </style>

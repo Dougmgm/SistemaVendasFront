@@ -62,6 +62,19 @@
             <router-link class="dropdown-item" to="/itempedido/cadastrar">Cadastrar Itens do Pedido</router-link>
           </div>
         </li>
+
+        <li class="nav-item dropdown" id="contas">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Conta de usuário
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" to="/itempedido/listar">Login</router-link>
+            <router-link class="dropdown-item" to="/itempedido/cadastrar">Sign-Up</router-link>
+          </div>
+        </li>
+
+        
       </ul>
     </div>
   </nav>
@@ -79,3 +92,8 @@
   
 </script>
 
+<style scoped>
+  #contas{
+    margin-left: 125%;
+  }
+</style>
