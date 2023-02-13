@@ -61,6 +61,9 @@ export default {
                 await ItemPedidoDataService.deletar(itemPedido.id);
                 this.obterItemPedido() 
             }
+        },
+        subTotal() {
+            let subtotal =  itemPedido.quantidade * itemPedido.valor
         }
     },
     mounted() {
@@ -75,6 +78,7 @@ export default {
         width: 60%;
         padding: 10px;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
     }
     
     #tabela{
@@ -88,7 +92,7 @@ export default {
     }
     
     th, td {
-        text-align: left;
+        text-align: center;
         padding: 16px;
     }
-</style>
+</style>    

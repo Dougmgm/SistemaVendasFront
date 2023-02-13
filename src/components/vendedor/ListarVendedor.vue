@@ -70,6 +70,7 @@ export default {
         width: 60%;
         padding: 10px;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
     }
 
     #tabela{
@@ -79,11 +80,12 @@ export default {
         border-collapse: collapse;
         border-spacing: 0;
         width: 100%;
-        border: 1px solid #ddd; 
+        border: 1px solid #ddd;
+        text-align: center; 
     }
     
     th, td {
-        text-align: left;
+        text-align: center;
         padding: 16px;
     }
 
