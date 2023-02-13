@@ -37,12 +37,16 @@
         },
         methods: {
             cadastrarPedido() {  
-                console.log("teste")
-                
-                PedidoDataService.cadastrar(this.pedidos) //chama o método de cadastro do data service
+                if(this.pedidos.date == '' | this.pedidos.vendedorId == '' | this.pedidos.clienteId == ''){
+                    alert("Favor preencher todos os dados")
+                } else {
+                    PedidoDataService.cadastrar(this.pedidos) //chama o método de cadastro do data service
                         .then(() => {
                             this.$router.push('listar');
-                        });                       
+                        });     
+                    }
+                
+                                  
             },
            dataAtual() {
                 this.buscarData = new Date().toISOString().split('T')[0];
