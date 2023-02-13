@@ -69,8 +69,8 @@
             Conta de usuário
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <router-link class="dropdown-item" to="/itempedido/listar">Login</router-link>
-            <router-link class="dropdown-item" to="/itempedido/cadastrar">Sign-Up</router-link>
+            <router-link class="dropdown-item" to="#">Login</router-link>
+            <router-link class="dropdown-item" to="#">Sign-Up</router-link>
           </div>
         </li>
 

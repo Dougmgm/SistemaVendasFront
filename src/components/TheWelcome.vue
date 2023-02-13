@@ -12,7 +12,11 @@
 
 <style scoped>
   h3 {
-    margin-top: 5%;
-    margin-left: 35%;
-  }
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
 </style>
