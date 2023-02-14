@@ -44,7 +44,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <div id="soma">Valor total: R$ {{ soma }}</div>
+                <!-- <div id="soma">Valor total: R$ {{ row.a + row.b }}</div> -->
             </table>
         </div>
     </div>
@@ -98,13 +98,25 @@ export default {
         },
 
         valorTotal() {
-            soma = (Number(soma) + (Number(this.itemPedidos.valor) * Number(this.itemPedidos.quantidade))).toFixed(2);
+            this.soma = this.soma + (this.itemPedidos.quantidade[index] * this.itemPedidos.valor[index]);
+            return this.soma;
         }
+
     },
 
     mounted() {
         this.obterItemPedido();
+    },
+
+    computed: {
+    // a computed getter
+    total() {
+        let sum = 0;
+        this.result_estimate.item_tabel.forEach(item => sum += this.calculatePriceForIndividualRow(item));
+        return sum;
     }
+  }
+    
 }   
 </script>
 

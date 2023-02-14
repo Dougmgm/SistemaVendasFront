@@ -7,7 +7,7 @@ class ItemPedidoDataService {
 
     listarPorId(id)
     {
-        return http.get(`/ItemPedido/ObterPorPedidoId/${id}`)
+        return http.get(`/itempedido/ObterPorPedidoId/${id}`)
     }
 
     cadastrar(itemPedido) {

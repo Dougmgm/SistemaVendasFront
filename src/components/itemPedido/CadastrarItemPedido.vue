@@ -51,8 +51,8 @@
                     ItemPedidoDataService.cadastrar(this.itemPedido) 
                         .then(() => {
                             this.$router.push('listar');
-                        });
-                }                                      
+                        }); 
+                }
             },
         }
     }
