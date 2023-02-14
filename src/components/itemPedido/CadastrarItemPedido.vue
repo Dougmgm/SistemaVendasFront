@@ -45,11 +45,14 @@
         methods: {
             cadastrarItemPedido() { 
                 console.log("teste")
-                
-                ItemPedidoDataService.cadastrar(this.itemPedido) 
+                if(this.itemPedido.pedidoId == '' | this.itemPedido.servicoId == '' | this.itemPedido.quantidade == '' | this.itemPedido.valor == '') {
+                    alert("Favor preencher todos os dados")
+                } else {
+                    ItemPedidoDataService.cadastrar(this.itemPedido) 
                         .then(() => {
                             this.$router.push('listar');
-                        });                       
+                        });
+                }                                      
             },
         }
     }

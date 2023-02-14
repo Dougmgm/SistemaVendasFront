@@ -33,12 +33,14 @@
         },
         methods: {
             cadastrarServico() {  //metódo para cadastro do vendedor
-                console.log("teste")
-
-                ServicoDataService.cadastrar(this.servico) //chama o método de cadastro do data service
+                if(this.servico.descricao == '' | this.servico.nome == '') {
+                    alert("Favor preencher todos os dados")
+                } else {
+                    ServicoDataService.cadastrar(this.servico) //chama o método de cadastro do data service
                     .then(() => {
                         this.$router.push('listar');
                     });
+                }             
             }
         }
     }

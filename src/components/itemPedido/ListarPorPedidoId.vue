@@ -2,16 +2,14 @@
     <div id="primeiro">
         <h3>Listagem de itens do pedido</h3>
         <div class="col-12"> <!-- "col-8" serve para ajustar o tamanho com o numero sendo o modificador-->
-            
+
             <hr />
 
             <div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username"
-                        aria-label="Recipient's username" aria-describedby="basic-addon2" v-model="idBusca">
+                    <input type="text" class="form-control" placeholder="Digite o id do pedido" aria-label="Digite o id do pedido" aria-describedby="basic-addon2" v-model="idBusca">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button"
-                            @click="listarPorId(this.idBusca)">Procurar</button>
+                        <button class="btn btn-outline-secondary" type="button" @click="listarPorId(this.idBusca)">Procurar</button>
                     </div>
                 </div>
             </div>

@@ -38,11 +38,14 @@
         },
         methods: {
             cadastrarCliente() {  //metódo para cadastro do vendedor
-                console.log("teste")
-                ClienteDataService.cadastrar(this.cliente) //chama o método de cadastro do data service
+                if(this.cliente.nome == '' | this.cliente.login == '' | this.cliente.senha == '') {
+                    alert("Favor preencher todos os dados")
+                } else {
+                    ClienteDataService.cadastrar(this.cliente) //chama o método de cadastro do data service
                         .then(() => {
                             this.$router.push('listar');
-                        });                       
+                        });   
+                }                                    
             }
         }
     }
