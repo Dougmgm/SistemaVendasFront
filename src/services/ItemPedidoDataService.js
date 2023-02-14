@@ -5,6 +5,11 @@ class ItemPedidoDataService {
         return http.get('/itempedido/listar');
     }
 
+    listarPorId(id)
+    {
+        return http.get(`/ItemPedido/ObterPorPedidoId/${id}`)
+    }
+
     cadastrar(itemPedido) {
         return http.post('/itempedido', itemPedido);
     }

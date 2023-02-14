@@ -48,6 +48,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <router-link class="dropdown-item" to="/pedido/listar">Listar Pedidos</router-link>
+            <router-link class="dropdown-item" to="/pedido/ListarPorPedidoId/">Listar Pedido Por Id</router-link>
             <router-link class="dropdown-item" to="/pedido/cadastrar">Cadastrar Pedidos</router-link>
           </div>
         </li>
@@ -58,7 +59,7 @@
             Item do Pedido
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <router-link class="dropdown-item" to="/itempedido/listar">Listar Itens do Pedido</router-link>
+            <router-link class="dropdown-item" to="/itempedido/listar">Listar Todos Itens do Pedido</router-link>
             <router-link class="dropdown-item" to="/itempedido/cadastrar">Cadastrar Itens do Pedido</router-link>
           </div>
         </li>
@@ -73,8 +74,6 @@
             <router-link class="dropdown-item" to="#">Sign-Up</router-link>
           </div>
         </li>
-
-        
       </ul>
     </div>
   </nav>

@@ -21,6 +21,7 @@ import AtualizarPedido from './components/pedido/AtualizarPedido.vue'
 import ListarItemPedido from './components/itemPedido/ListarItemPedido.vue'
 import CadastrarItemPedido from './components/itemPedido/CadastrarItemPedido.vue'
 import AtualizarItemPedido from './components/itemPedido/AtualizarItemPedido.vue'
+import ListarPorPedidoId from './components/itemPedido/ListarPorPedidoId.vue'
 
 const routes = [
     {
@@ -102,6 +103,10 @@ const routes = [
         component: AtualizarPedido
     },
 
+    {
+        path: "/pedido/ListarPorPedidoId/",
+        component: ListarPorPedidoId
+    },
     
 //----------------------------------------------------------item pedido------------------------------------------------------
 
@@ -118,7 +123,9 @@ const routes = [
     {
         path:"/itemPedido/:id",
         component: AtualizarItemPedido
-    }
+    },
+
+    
 ];
 
 const router = createRouter({

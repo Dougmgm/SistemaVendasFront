@@ -5,6 +5,8 @@ class PedidoDataService {
         return http.get('/pedido/listar')
     }
 
+   
+
     cadastrar(pedidos) {
         return http.post('/pedido', pedidos);
     }
