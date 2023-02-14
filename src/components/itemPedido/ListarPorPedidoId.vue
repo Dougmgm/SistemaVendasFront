@@ -12,8 +12,8 @@
             <table class="table table-striped" id="tabela" v-if="idColocado">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
                         <th scope="col">ID do pedido</th>
+                        <th scope="col">ID item do pedido</th>
                         <th scope="col">ID do serviço</th>
                         <th scope="col">Quantidade</th>
                         <th scope="col">Valor</th>
@@ -23,8 +23,8 @@
                 </thead>
                 <tbody>
                     <tr v-for="(itemPedido, index) in itemPedidos" :key="{index}">
-                        <td>{{ itemPedido.id }}</td>
                         <td>{{ itemPedido.pedidoId }}</td>
+                        <td>{{ itemPedido.id }}</td>                      
                         <td>{{ itemPedido.servicoId }}</td>
                         <td>{{ itemPedido.quantidade }}</td>
                         <td>{{ itemPedido.valor }}</td>
@@ -36,6 +36,7 @@
                         </td>
                     </tr>
                 </tbody>
+                <div id="soma">Valor total: R${{ soma }}</div>
             </table>
         </div>
     </div>
@@ -54,15 +55,18 @@ export default {
         }
     },
     methods: {
+
         obterItemPedido() {
             ItemPedidoDataService.listar()
                 .then(response => { 
                     this.itemPedidos = response.data;
                 })
         },
+
         editarItemPedido(id) { //método para editar
             this.$router.push('/itemPedido/' + id)
         },
+
         async excluirItemPedido(itemPedido) {
             if (confirm(`Tem certeza que deseja excluir o item do pedido ${itemPedido.id}?`)) 
             {
@@ -70,11 +74,12 @@ export default {
                 this.obterItemPedido() 
             }
         },
+
         listarPorId(pedidoId) {
             if(pedidoId == '')
             {
                 this.idColocado = false;
-                alert("Por valor inserir um id válido")
+                alert("Por favor inserir um id válido")
                 return;
             }
 
@@ -85,6 +90,7 @@ export default {
                 })
         }
     },
+
     mounted() {
         this.obterItemPedido();
     }
@@ -113,5 +119,10 @@ export default {
     th, td {
         text-align: center;
         padding: 16px;
+    }
+
+    #soma {
+        display: flex;
+        justify-content: flex-end;
     }
 </style>    
