@@ -22,7 +22,7 @@
                         <td>{{ itemPedido.servicoId }}</td>
                         <td>{{ itemPedido.quantidade }}</td>
                         <td>R$ {{ itemPedido.valor.toFixed(2) }}</td>
-                        <td onchange="setTwoNumberDecimal">R$ {{itemPedido.quantidade * itemPedido.valor}}</td>
+                        <td onchange="setTwoNumberDecimal">R$ {{(itemPedido.quantidade * itemPedido.valor).toFixed(2)}}</td>
                         <td>
                             <button class="btn btn-success" @click="editarItemPedido(itemPedido.id)">Editar</button> <!--redirecionamento para "PUT" colocado-->
                             <span> - </span>
@@ -62,9 +62,6 @@ export default {
                 this.obterItemPedido() 
             }
         },
-        subTotal() {
-            let subtotal =  itemPedido.quantidade * itemPedido.valor
-        }
     },
     mounted() {
         this.obterItemPedido();
