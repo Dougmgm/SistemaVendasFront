@@ -45,9 +45,8 @@
                             this.$router.push('listar');
                         });     
                     }
-                
-                                  
             },
+            
            dataAtual() {
                 this.buscarData = new Date().toISOString().split('T')[0];
                 console.log(this.buscarData)
