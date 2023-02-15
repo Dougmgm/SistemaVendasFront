@@ -44,8 +44,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Valor Total</td>
-                        <td>R$ {{ total.toFixed(2)  }}</td>
+                        <td>Valor Total:</td>
+                        <td id="soma">R$ {{ total.toFixed(2)  }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -146,7 +146,6 @@ th, td {
 }
 
 #soma {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    text-align: left;
 }
 </style>    
