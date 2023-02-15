@@ -1,3 +1,0 @@
-<script>
-    //para depois
-</script>

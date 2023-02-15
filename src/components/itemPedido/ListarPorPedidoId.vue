@@ -34,7 +34,7 @@
                         <td>{{ itemPedido.id }}</td>
                         <td>{{ itemPedido.servicoId }}</td>
                         <td>{{ itemPedido.quantidade }}</td>
-                        <td>{{ itemPedido.valor }}</td>
+                        <td>R$ {{ itemPedido.valor.toFixed(2) }}</td>
                         <td onchange="setTwoNumberDecimal">R$ {{ itemPedido.quantidade * itemPedido.valor }}</td>
                         <td>
                             <button class="btn btn-success" @click="editarItemPedido(itemPedido.id)">Editar</button>
@@ -45,7 +45,7 @@
                     </tr>
                     <tr>
                         <td>Valor Total</td>
-                        <td>R$ {{ total }}</td>
+                        <td>R$ {{ total.toFixed(2)  }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -62,8 +62,7 @@ export default {
         return {
             itemPedidos: [],
             idColocado: false,
-            idBusca: '',
-            soma: '500'
+            idBusca: ''
         }
     },
     methods: {
@@ -141,8 +140,7 @@ export default {
     border: 1px solid #ddd;
 }
 
-th,
-td {
+th, td {
     text-align: center;
     padding: 16px;
 }
