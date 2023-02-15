@@ -1,6 +1,6 @@
 <template>
     <div id="primeiro">
-        <h3>Listagem de itens do pedido</h3>
+        <h3>Listagem de pedido por id</h3>
         <div class="col-12"> <!-- "col-8" serve para ajustar o tamanho com o numero sendo o modificador-->
 
             <hr />
@@ -43,8 +43,11 @@
                             <button class="btn btn-danger" @click="excluirItemPedido(itemPedido)">Excluir</button>
                         </td>
                     </tr>
+                    <tr>
+                        <td>Valor Total</td>
+                        <td>R$ {{ total }}</td>
+                    </tr>
                 </tbody>
-                <!-- <div id="soma">Valor total: R$ {{ row.a + row.b }}</div> -->
             </table>
         </div>
     </div>
@@ -109,15 +112,14 @@ export default {
     },
 
     computed: {
-    // a computed getter
-    total() {
-        let sum = 0;
-        this.result_estimate.item_tabel.forEach(item => sum += this.calculatePriceForIndividualRow(item));
-        return sum;
+        total: function() {
+        return this.itemPedidos.reduce(function(total, itemPedidos) {
+        return total + itemPedidos.valor * itemPedidos.quantidade;
+      }, 0);
     }
   }
-    
 }   
+
 </script>
 
 <style scoped>
